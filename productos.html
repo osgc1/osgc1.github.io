@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jabón El Triunfo - Productos</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="Productos.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+ 
+<header class="barra-superrio-azul p-3 shadow-sm">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            
+     <div class="bg-white rounded-pill p-2 d-inline-block shadow">
+    
+    <img 
+        id="logoInicio"
+        src="img/logo.png" 
+        alt="Logo" 
+        style="height: 60px; border-radius: 20%; cursor: pointer;"
+    >
+
+</div>
+           
+            <div class="d-flex gap-3">
+                
+                <button type="button" class="iniciar-sesion " data-bs-toggle="modal" data-bs-target="#loginModal">
+
+                Iniciar Sesión
+                <div class="Producto">
+
+    <button 
+        class="Producto" 
+        type="button" 
+        data-bs-toggle="dropdown" 
+        aria-expanded="false">
+        Productos
+    </button>
+
+    <ul class="dropdown-menu">
+
+        <li>
+            <button 
+                id="btnUnidad"
+                class="dropdown-item" 
+                type="button">
+                Unidad
+            </button>
+        </li>
+
+        <li>
+            <button 
+                id="btnPacas"
+                class="dropdown-item" 
+                type="button">
+                Pacas
+            </button>
+        </li>
+
+    </ul>
+        <div class="d-flex gap-3">
+        <button class="Carrito" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" >
+        🛒 Carrito (<span id="cart-counter">0</span>)
+        </button>
+        </div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+</header>
+<!--Iniciar sesion  -->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header border-0 pb-0">
+<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body p-4">
+<ul class="nav nav-pills nav-justified mb-4" id="pills-tab" role="tablist">
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab">Ingresar</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link" id="pills-register-tab" data-bs-toggle="pill" data-bs-target="#pills-register" type="button" role="tab">Registrarse</button>
+</li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+<div class="tab-pane fade show active" id="pills-login" role="tabpanel">
+<form>
+<div class="mb-3">
+<label class="form-label">Correo Electrónico</label>
+<input type="email" class="form-control" placeholder="tu@correo.com">
+</div>
+<div class="mb-3">
+<label class="form-label">Contraseña</label>
+<input type="password" class="form-control" placeholder="••••••••">
+</div>
+<div class="d-flex justify-content-between mb-4 small">
+<div>
+<input type="checkbox" id="remember"> <label for="remember">Recordarme</label>
+</div>
+<a href="#" class="text-warning text-decoration-none">¿Olvidaste tu contraseña?</a>
+</div>
+<button type="submit" class="btn btn-yellow w-100">Iniciar Sesión</button>
+</form>
+</div>
+ 
+                        <div class="tab-pane fade" id="pills-register" role="tabpanel">
+<form>
+<div class="mb-3">
+<label class="form-label">Nombre Completo</label>
+<input type="text" class="form-control" placeholder="Juan Pérez">
+</div>
+<div class="mb-3">
+<label class="form-label">Correo Electrónico</label>
+<input type="email" class="form-control" placeholder="tu@correo.com">
+</div>
+<div class="mb-4">
+<label class="form-label">Crear Contraseña</label>
+<input type="password" class="form-control" placeholder="••••••••">
+</div>
+<button type="submit" class="btn btn-yellow w-100">Crear Cuenta</button>
+</form>
+</div>
+ 
+                    </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Catalogo -->
+ 
+    <main class="container mt-5">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="col animate-fade-up delay-1">
+<div class="product-card">
+<div class="img-container">
+<img src="img/coca grande.png" alt="Jabón de Loza Crema" class="product-img">
+<div class="description-overlay">
+    <h1>Coca grande </h1>
+<p>Fórmula arrancagrasa ultra concentrada. Elimina la suciedad más pegada de tus platos y ollas, Coca de 500 gramos.</p>
+<span class="price">$ 4.500 COP</span>
+</div>
+</div>
+<button class="btn-yellow add-to-cart-btn" data-name="Coca grande Dado" data-price="4500">Añadir al carrito</button>
+</div>
+</div>
+ 
+            <div class="col animate-fade-up delay-2">
+<div class="product-card">
+<div class="img-container">
+<img src="img/caca pequeña dado.png" class="product-img">
+<div class="description-overlay">
+    <h1>Coca pequeña</h1>
+<p>Fórmula arrancagrasa ultra concentrada. Elimina la suciedad más pegada de tus platos y ollas, Coca de 250 gramos.</p>
+<span class="price">$ 3.500 COP</span>
+</div>
+</div>
+<button class="btn-yellow add-to-cart-btn" data-name="Coca pequeña dado" data-price="3500">Añadir al carrito</button>
+</div>
+</div>
+ 
+            <div class="col animate-fade-up delay-3">
+<div class="product-card">
+<div class="img-container">
+<img src="img/Blancoazul.png" alt="Jabón Rey Tradicional" class="product-img">
+<div class="description-overlay">
+    <h1>Blancoazul</h1>
+<p>Poder limpiador versátil. Perfecto para el lavado diario de ropa, y telas jabon de 750 gramos.</p>
+<span class="price">$ 4.500 COP</span>
+</div>
+</div>
+<button class="btn-yellow add-to-cart-btn" data-name="Blancoazul" data-price="4500">Añadir al carrito</button>
+</div>
+</div>
+            <div class="col animate-fade-up delay-6">
+<div class="product-card">
+<div class="img-container">
+<img src="img/azul .png" alt="Jabón Rey Tradicional" class="product-img">
+<div class="description-overlay">
+    <h1>Azul</h1>
+<p>El clásico infalible para el lavado a mano. Quita manchas difíciles en cuellos y mangas, protegiendo las fibras y el color de tus prendas favoritas. 1000 gramos</p>
+<span class="price">$ 4.700 COP</span>
+</div>
+</div>
+<button class="btn-yellow add-to-cart-btn" data-name="Azul" data-price="4700">Añadir al carrito</button>
+</div>
+</div>
+            <div class="col animate-fade-up delay-7">
+<div class="product-card">
+<div class="img-container">
+<img src="img/panecito azul.png" alt="Jabón Rey Tradicional" class="product-img">
+<div class="description-overlay">
+    <h1>Panecito azul</h1>
+<p>El clásico infalible para el lavado a mano. Quita manchas difíciles en cuellos y mangas, protegiendo las fibras y el color de tus prendas favoritas. 300 gramos</p>
+<span class="price">$ 2.500 COP</span>
+</div>
+</div>
+<button class="btn-yellow add-to-cart-btn" data-name="Panecito Azul" data-price="2500">Añadir al carrito</button>
+</div>
+</div>
+            <div class="col animate-fade-up delay-7">
+<div class="product-card">
+<div class="img-container">
+<img src="img/oferta.png" alt="Jabón Rey Tradicional" class="product-img">
+<div class="description-overlay">
+    <h1>Oferta/Promoción</h1>
+<p>Promocion de cojin verde y rosa mas el panecito azul 1.300 gramos.</p>
+<span class="price">$ 6.000 COP</span>
+</div>
+</div>
+<button class="btn-yellow add-to-cart-btn" data-name="Oferta/Promoción" data-price="6000">Añadir al carrito</button>
+</div>
+</div>
+
+ 
+            <div class="col animate-fade-up delay-4">
+<div class="product-card">
+<div class="img-container">
+<img src="img/cojin rosa.jpg" alt="Jabón Ropa Blanca" class="product-img">
+<div class="description-overlay">
+    <h1>Cojin rosa</h1>
+<p>Produto indicado para el cuidado de las fibras y los vuelve mas brillante con olor a fresa. 500 gramos</p>
+<span class="price">$ 3.000 COP</span>
+</div>
+</div>
+<button class="btn-yellow add-to-cart-btn" data-name="Cojin rosa" data-price="3000">Añadir al carrito</button>
+</div>
+</div>
+
+ 
+            <div class="col animate-fade-up delay-5">
+<div class="product-card">
+<div class="img-container">
+<img src="img/cojin verde.jpg" alt="Jabón Ropa Color" class="product-img">
+<div class="description-overlay">
+    <h1>Cojin verde</h1>
+<p> Produto indicado para el cuidado de las fibras y los vuelve mas brillante con olor a limon.500 gramos</p>
+<span class="price">$ 3.000 COP</span>
+</div>
+</div>
+<button class="btn-yellow add-to-cart-btn" data-name="Cojin verde" data-price="3000">Añadir al carrito</button>
+</div>
+</div>
+
+            <div class="col animate-fade-up delay-5">
+<div class="product-card">
+<div class="img-container">
+<img src="img/panecito dado.png" alt="Jabón Ropa Color" class="product-img">
+<div class="description-overlay">
+    <h1>Panecito Dado</h1>
+<p>Fórmula arrancagrasa ultra concentrada. Elimina la suciedad más pegada de tus platos y ollas. 250 gramos </p>
+<span class="price">$ 2.500 COP</span>
+</div>
+</div>
+<button class="btn-yellow add-to-cart-btn" data-name="Cojin verde" data-price="3000">Añadir al carrito</button>
+</div>
+</div>
+</main>
+
+
+ <!--Sobre nosotros -->
+
+
+    <footer class="footer-custom text-center">
+<h2>Contactos y ubicación</h2>
+</footer>
+ 
+<!-- Carrito -->
+
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+<div class="offcanvas-header" style="border-bottom: 1px solid #213c78;">
+<h5 id="cartOffcanvasLabel" style="color: #f6c433;" font-weight: bold;">🛒 Tu Pedido</h5>
+<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body d-flex flex-column">
+<div id="cart-items-container" class="flex-grow-1" style="overflow-y: auto;">
+</div>
+ 
+            <div class="checkout-panel mt-auto">
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h5 class="m-0">Total:</h5>
+<h4 class="m-0" style="color: #f6c433; font-weight: bold;" id="cart-total">$ 0 COP</h4>
+</div>
+<hr style="border-color: #1f1f1f;">
+<p class="mb-2 fs-6">Método de pago:</p>
+<div class="form-check mb-2">
+<input class="form-check-input" type="radio" name="paymentMethod" id="payCard" checked>
+<label class="form-check-label" for="payCard">💳 Tarjeta de Crédito / Débito</label>
+</div>
+<div class="form-check mb-4">
+<input class="form-check-input" type="radio" name="paymentMethod" id="payPSE">
+<label class="form-check-label" for="payPSE">🏦 PSE</label>
+</div>
+ 
+                <button  id="btnPagar" class="btn-yellow w-100" style="width: 100% !important;">Ir a Pagar</button>
+</div>
+</div>
+</div>
+
+<!-- Transicion -->
+
+<script src="Carrito.js"></script>
+
+<div id="transicion">
+    <img src="img/El-triunfo.gif" alt="Cargando">
+</div>
+
+</body>
+</html>>

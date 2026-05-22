@@ -1,0 +1,305 @@
+/* ==========================================
+   VARIABLES Y ESTILOS GENERALES
+   ========================================== */
+:root {
+    --bg-color-main: #140d36; 
+    --bg-color-card: #203565; 
+    --color-red: #e31818;     
+    --color-yellow: #f8c93e;  
+}
+
+body {
+    background-color: var(--bg-color-main);
+    font-family: 'Roboto', serif;
+    color: white;
+    overflow-x: hidden;
+    
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', serif; 
+}
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN Y BOTONES
+   ========================================== */
+.iniciar-sesion {
+    background-color: var(--color-red);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 25px;
+    margin-left: 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
+}
+
+.Carrito {
+    border-radius: 1%;
+    box-shadow: 0 4px 8px rgba(246, 255, 0, 0.4);
+    color: white;
+    background-color: var(--color-yellow);
+}
+
+.Producto {
+    background-color:var(--color-red);
+    transform: scale(1.05);
+    color: white;
+    box-shadow: 0 4px 8px rgba(227, 24, 24, 0.4);
+    border-radius: 10%;
+}
+
+.dropdown-menu {
+    background-color:var(--color-red);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+}
+
+.dropdown-item {
+    color: #ffffff;
+}
+
+/* ==========================================
+   MODAL LOGIN / REGISTRO
+   ========================================== */
+.modal-content {
+    background-color: var(--bg-color-main);
+    border: 2px solid var(--bg-color-card);
+    border-radius: 15px;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--bg-color-card);
+}
+
+.nav-pills .nav-link {
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: var(--color-red);
+    color: white;
+}
+
+.form-control {
+    background-color: var(--bg-color-card);
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background-color: #27407a;
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(248, 201, 62, 0.25);
+}
+
+.form-control::placeholder {
+    color: #a0aabf;
+}
+
+/* ==========================================
+   TARJETAS DE PRODUCTOS
+   ========================================== */
+.product-card {
+    background-color: var(--bg-color-card);
+    border-radius: 15px;
+    padding: 25px 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    background-color: #27407a;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 180px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-img {
+    max-height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.description-overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(20, 13, 54, 0.92); 
+    color: white;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+    padding: 15px;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    cursor: default;
+}
+
+.description-overlay p { 
+    margin: 0; 
+    font-size: 0.85rem; 
+    line-height: 1.4; 
+}
+
+.description-overlay .price { 
+    font-weight: bold; 
+    color: var(--color-yellow); 
+    margin-top: 10px; 
+    font-size: 1.1rem; 
+}
+
+.img-container:hover .description-overlay { 
+    opacity: 1; 
+}
+
+.product-card:hover .product-img { 
+    transform: scale(1.08); 
+}
+
+.btn-yellow {
+    background-color: var(--color-yellow);
+    color: #333;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    width: 80%;
+}
+
+.btn-yellow:hover {
+    background-color: var(--color-yellow);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(248, 201, 62, 0.5);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer-custom {
+    background-color: #ff0000;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-custom h2 { 
+    color: #ffffff; 
+    margin: 0; 
+    font-size: 2.5rem; 
+}
+
+/* ==========================================
+   MENÚ DEL CARRITO (OFFCANVAS)
+   ========================================== */
+.offcanvas {
+    background-color: #170f47;
+    color: white;
+    border-left: 2px solid #213c78;
+}
+
+.cart-item {
+    background-color: #213c78;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-item-title { font-size: 0.9rem; font-weight: bold; margin: 0; }
+.cart-item-price { color:var(--color-yellow); font-size: 0.85rem; margin: 0; }
+
+.cart-controls {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    margin: 0 10px;
+}
+
+.btn-qty {
+    background: transparent; 
+    border: 1px solid white; 
+    color: white; 
+    border-radius: 5px; 
+    width: 25px; 
+    height: 25px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0; 
+    cursor: pointer;
+}
+
+.btn-qty:hover { 
+    background: var(--color-yellow); 
+    color: black; 
+    border-color: #f6c433; 
+}
+
+.btn-remove-item { 
+    background: transparent; 
+    border: none; 
+    color: #ff4d4d; 
+    font-size: 1.2rem; 
+    cursor: pointer; 
+}
+
+.checkout-panel { 
+    background-color: #0b0722; 
+    padding: 15px; 
+    border-radius: 10px; 
+    margin-top: 20px; 
+}
+
+/* ==========================================
+   TRANSICIÓN ENTRE PÁGINAS
+   ========================================== */
+#transicion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0d1b3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+#transicion.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+#transicion img {
+    width: 1900px;
+}

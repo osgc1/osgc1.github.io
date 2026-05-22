@@ -1,0 +1,132 @@
+body{
+    background-color: #0f172a;
+    color: white;
+    font-family: 'Roboto', serif;
+      h1, h2, h3 {
+            font-family: 'Montserrat', serif; }
+}
+
+
+/* HEADER */
+
+
+.barra-superrio-azul{
+    background: linear-gradient(90deg,#0b2c6b,#1e3f8f);
+}
+
+.logo-img{
+    height: 60px;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+
+/* RECIBO */
+
+
+.recibo-container{
+
+    max-width: 800px;
+
+    margin: 50px auto;
+
+    background-color: #16213e;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+
+}
+
+.titulo{
+    color: #f6c433;
+    font-weight: bold;
+}
+
+.linea{
+    border-color: #f6c433;
+}
+
+.producto{
+    background-color: #1f2a48;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+}
+
+.total{
+    color: #f6c433;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+.btn-yellow{
+
+    background-color: #f6c433;
+
+    border: none;
+
+    color: black;
+
+    font-weight: bold;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+}
+
+.btn-yellow:hover{
+    transform: scale(1.03);
+}
+
+
+/* FOOTER */
+
+
+.footer-custom{
+    background-color: #ff0000;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+     
+
+        /* TRANSICIÓN ENTRE PÁGINAS */
+
+#transicion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0d1b3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.5s ease;
+}
+
+#transicion.activo{
+    opacity: 1;
+    visibility: visible;
+}
+
+#transicion img{
+    width: 1900px;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Recibo de Compra</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="pago.css">
+
+
+</head>
+<body>
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+
+<header class="barra-superrio-azul p-3 shadow-sm">
+
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+        <div class="bg-white rounded-pill p-2 d-inline-block shadow">
+
+            <img 
+            id="logoInicio"
+            src="img/logo.png"
+            class="logo-img"
+            alt="Logo">
+
+        </div>
+
+        <h2 class="m-0 text-white">
+            Recibo de Compra
+        </h2>
+
+    </div>
+
+</header>
+
+<!-- ========================= -->
+<!-- RECIBO -->
+<!-- ========================= -->
+
+<div class="container">
+
+    <div class="recibo-container">
+
+        <h1 class="titulo text-center mb-4">
+            ✅ Compra Exitosa
+        </h1>
+
+        <p class="text-center">
+            Gracias por comprar en Jabón El Triunfo
+        </p>
+
+        <hr class="linea">
+
+        <!-- PRODUCTOS -->
+
+        <div id="productos-recibo">
+
+            <div class="producto d-flex justify-content-between">
+
+                <span>Coca Grande Dado</span>
+
+                <span>$ 4.500 COP</span>
+
+            </div>
+
+            <div class="producto d-flex justify-content-between">
+
+                <span>Cojín Verde</span>
+
+                <span>$ 3.000 COP</span>
+
+            </div>
+
+        </div>
+
+        <hr class="linea">
+
+        <!-- TOTAL -->
+
+        <div class="d-flex justify-content-between align-items-center mt-4">
+
+            <h3>Total:</h3>
+
+            <h2 class="total">
+                $ 7.500 COP
+            </h2>
+
+        </div>
+
+        <!-- INFO -->
+
+        <div class="mt-5">
+
+            <p><strong>Fecha:</strong> 17/05/2026</p>
+
+            <p><strong>Método de Pago:</strong> Tarjeta</p>
+
+            <p><strong>Número de Pedido:</strong> #45871</p>
+
+        </div>
+
+        <!-- BOTONES -->
+
+        <div class="mt-5 d-grid gap-3">
+
+            <button id="volverInicio" class="btn-yellow">
+
+                Volver al Inicio
+
+            </button>
+
+            <button onclick="window.print()" class="btn-yellow">
+
+                Imprimir Recibo
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer class="footer-custom text-center">
+
+    <h1>
+        Jabón El Triunfo
+    </h1>
+
+    <p>
+        Gracias por tu compra
+    </p>
+
+</footer>
+
+
+
+<script src="Carrito.js"></script>
+
+
+
+<!-- transicion-->
+
+
+<div id="transicion">
+    <img src="img/El-triunfo.gif" alt="Cargando">
+</div>
+
+scc
+</body>
+</html>
